@@ -1,2 +1,2 @@
 # Daffodil-Software-Website
-This is a software 
+This is a general website for daffodil software ltd.
