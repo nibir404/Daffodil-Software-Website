@@ -14,12 +14,12 @@ export default defineConfig({
     alias: {
       // Alias @ to the src directory
       '@': path.resolve(__dirname, './src'),
+      // Alias figma:asset to the assets directory (Figma-exported images)
       'figma:asset': path.resolve(__dirname, './src/assets'),
-      '@generated': path.resolve(__dirname, './src/generated'),
-      '@components': path.resolve(__dirname, './src/components'),
-      '@pages': path.resolve(__dirname, './src/pages'),
-      '@hooks': path.resolve(__dirname, './src/hooks'),
-      '@utils': path.resolve(__dirname, './src/utils'),
+      // Shorthand aliases for common source paths
+      '@components': path.resolve(__dirname, './src/app/components'),
+      '@pages': path.resolve(__dirname, './src/app/pages'),
+      '@imports': path.resolve(__dirname, './src/imports'),
     },
   },
 
