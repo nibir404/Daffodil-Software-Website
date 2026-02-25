@@ -5,7 +5,8 @@ import angularIcon from "figma:asset/0563dd966aad880dfc1fc78ab7b4646645baeaa7.pn
 import dockerIcon from "figma:asset/06d33d1d0c7787fd913cf9f1fac6bb485e4ab826.png";
 import dotnetIcon from "figma:asset/19529c49dd9cce26cbf73298662435ed21764e76.png";
 import expressIcon from "figma:asset/fae702d0df03356cc61c5c330ae84e475a934de7.png";
-import flutterIcon from "figma:asset/7935e3a59278b638295f3353a54b44e0b918631.png";
+// import flutterIcon from "figma:asset/7935e3a59278b638295f3353a54b44e0b918631.png";
+const flutterIcon = ""; // Missing asset stub
 import githubIcon from "figma:asset/b77cdfad4c31e9d8641a4827650f6e9e1ad0bf40.png";
 import golangIcon from "figma:asset/557ce117ed5bf240f6f60af363b2b4ab4d24d1fe.png";
 import html5Icon from "figma:asset/d90a9dbb3a4f78e763a112bc517cdd0ef36a779a.png";
