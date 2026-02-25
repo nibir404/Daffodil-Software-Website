@@ -1,61 +1,47 @@
-**Add your own guidelines here**
-<!--
+# Daffodil Software Ltd - Project Guidelines
 
-System Guidelines
+This document outlines the coding standards, design principles, and development best practices for the Daffodil Software Ltd website project.
 
-Use this file to provide the AI with rules and guidelines you want it to follow.
-This template outlines a few examples of things you can add. You can add your own sections and format it to suit your needs
+## 🛠 Coding Standard Guidelines
 
-TIP: More context isn't always better. It can confuse the LLM. Try and add the most important rules you need
+- **React Composition**: Prefer composition over inheritance. Break large components into smaller, focused sub-components within the `src/app/components` directory.
+- **Routing**: All new top-level pages MUST be registered in `src/app/routes.tsx`.
+- **Imports**: Use absolute imports from `@/` (if configured) or maintain clear relative paths. Group imports by:
+  1.  React/Framework
+  2.  Third-party libraries
+  3.  Internal components
+  4.  Styles/Assets
+- **TypeScript**: Use interfaces for component props and ensure type safety for all data structures.
 
-# General guidelines
+## 🎨 Design & Styling Guidelines
 
-Any general rules you want the AI to follow.
-For example:
+- **Tailwind CSS**: Use Tailwind CSS for 90% of styling. Avoid inline styles unless calculating values dynamically.
+- **Typography**: Use the brand fonts defined in the design system:
+  - Headers: `Helvetica Now Display`
+  - Body: `Inter`
+- **Colors**: Strictly adhere to the brand palette:
+  - Primary Green: `#01e067`
+  - Background: `#FFFFFF` or `#F7F7F7` for sections
+  - Secondary/Dark: `#111111`
+- **Responsive Breakpoints**: Always test layouts at `320px`, `768px`, `1024px`, and `1440px`.
 
-* Only use absolute positioning when necessary. Opt for responsive and well structured layouts that use flexbox and grid by default
-* Refactor code as you go to keep code clean
-* Keep file sizes small and put helper functions and components in their own files.
+## ⚡ Performance & Animation
 
---------------
+- **GSAP & Motion**:
+  - Use GSAP for complex timelines and scroll-triggered animations.
+  - Use Framer Motion for simple hover effects and component transitions.
+- **SVGs**: Keep SVGs optimized. Use the components in `src/imports/` for complex brand assets.
 
-# Design system guidelines
-Rules for how the AI should make generations look like your company's design system
+## 📂 Folder Structure Consistency
 
-Additionally, if you select a design system to use in the prompt box, you can reference
-your design system's components, tokens, variables and components.
-For example:
+- `src/app/pages`: Top-level route components only.
+- `src/app/components`: Reusable sections and UI patterns.
+- `src/imports`: Figma-generated components and large SVG assets. Do not modify these files manually if they are intended to be re-generated; instead, wrap them or use them as-is.
 
-* Use a base font-size of 14px
-* Date formats should always be in the format “Jun 10”
-* The bottom toolbar should only ever have a maximum of 4 items
-* Never use the floating action button with the bottom toolbar
-* Chips should always come in sets of 3 or more
-* Don't use a dropdown if there are 2 or fewer options
+## ✅ Implementation Checklist
 
-You can also create sub sections and add more specific details
-For example:
-
-
-## Button
-The Button component is a fundamental interactive element in our design system, designed to trigger actions or navigate
-users through the application. It provides visual feedback and clear affordances to enhance user experience.
-
-### Usage
-Buttons should be used for important actions that users need to take, such as form submissions, confirming choices,
-or initiating processes. They communicate interactivity and should have clear, action-oriented labels.
-
-### Variants
-* Primary Button
-  * Purpose : Used for the main action in a section or page
-  * Visual Style : Bold, filled with the primary brand color
-  * Usage : One primary button per section to guide users toward the most important action
-* Secondary Button
-  * Purpose : Used for alternative or supporting actions
-  * Visual Style : Outlined with the primary color, transparent background
-  * Usage : Can appear alongside a primary button for less important actions
-* Tertiary Button
-  * Purpose : Used for the least important actions
-  * Visual Style : Text-only with no border, using primary color
-  * Usage : For actions that should be available but not emphasized
--->
+- [ ] Does it match the Figma design precisely?
+- [ ] Is it responsive across all primary breakpoints?
+- [ ] Are animations smooth (60fps)?
+- [ ] Does it follow the established folder structure?
+- [ ] Are accessibility roles and ARIA labels included where necessary?
