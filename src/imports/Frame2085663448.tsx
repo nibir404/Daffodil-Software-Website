@@ -1,4 +1,4 @@
-import svgPaths from "./svg-sitq8yjpd8";
+import svgPaths from "../assets/svgs/svg-sitq8yjpd8";
 import imgEllipse1 from "figma:asset/2c1d19837cb37ceda1d0c05038d9a6454a9422d3.png";
 
 function Frame139() {

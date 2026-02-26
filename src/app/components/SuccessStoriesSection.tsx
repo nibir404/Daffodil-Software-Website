@@ -1,4 +1,4 @@
-import svgPaths from "../../imports/svg-7htsu2eumu";
+import svgPaths from "../../assets/svgs/svg-7htsu2eumu";
 import imgImage32 from "figma:asset/3fb78841a0d9e817e7f89226c881690647824d8e.png";
 import imgRectangle5 from "figma:asset/93bd53fc3a66870f52cc030f69da770da8cce477.png";
 

@@ -3,7 +3,7 @@ import imgImage35 from "figma:asset/2516de018ffa3072ce276d1f94f901c9c0bcc638.png
 import imgImage36 from "figma:asset/aea28bb90ff2bde067f020cdb22dd8d1bb0111e1.png";
 import imgImage37 from "figma:asset/a66a1d2c754f12d2b86b1f4f9c26f0df997d2895.png";
 import imgImage73 from "figma:asset/0312bcea605fc90dfdf2e50e657b2cd982039955.png";
-import svgPaths from "../../imports/svg-hb3t842kl2";
+import svgPaths from "../../assets/svgs/svg-hb3t842kl2";
 import { Link } from "react-router";
 
 export function Footer() {

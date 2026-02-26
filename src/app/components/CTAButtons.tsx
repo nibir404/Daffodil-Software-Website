@@ -1,4 +1,4 @@
-import svgPaths from "../../imports/svg-kr2unwykat";
+import svgPaths from "../../assets/svgs/svg-kr2unwykat";
 import { Link } from "react-router";
 
 interface PrimaryCTAProps {

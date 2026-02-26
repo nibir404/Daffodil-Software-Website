@@ -1,4 +1,4 @@
-import svgPaths from "./svg-4rzdvkqhyh";
+import svgPaths from "../assets/svgs/svg-4rzdvkqhyh";
 import imgEllipse153 from "figma:asset/f137f12625c1a018397fa711cbe5acddcc0266f2.png";
 import imgEllipse154 from "figma:asset/322892a770d94ef850a9d6b3e8a86adc23fbc458.png";
 import imgEllipse155 from "figma:asset/4e2e2239a2685f3728a7c603c1f42a6b6d179593.png";

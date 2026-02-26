@@ -1,5 +1,5 @@
 import { PrimaryCTA } from "../components/CTAButtons";
-import svgPaths from "../../imports/svg-w97waj2wxx";
+import svgPaths from "../../assets/svgs/svg-w97waj2wxx";
 import imgImage22 from "figma:asset/b3a76efb62e40b6c12695c1680be963ca0a490ce.png";
 import imgImage23 from "figma:asset/d41a3add220587a395706f0474ccd7f35387d5be.png";
 import imgImage25 from "figma:asset/dbd26c38ee66f78dc4c9d30e7c592b4d8058da90.png";

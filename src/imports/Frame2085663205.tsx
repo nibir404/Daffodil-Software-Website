@@ -1,4 +1,4 @@
-import svgPaths from "./svg-rriiw31jtj";
+import svgPaths from "../assets/svgs/svg-rriiw31jtj";
 
 export default function Frame() {
   return (

@@ -1,4 +1,4 @@
-import svgPaths from "./svg-y701l5ol2e";
+import svgPaths from "../assets/svgs/svg-y701l5ol2e";
 import imgRectangle670 from "figma:asset/8a6a440b505051ec5b4e8375a55abe84e49cd0b3.png";
 import imgRectangle671 from "figma:asset/eca1ce33bf493c0b83cc08e22c8aaf417a9f8f54.png";
 import imgRectangle672 from "figma:asset/655452b0a01149ac4781ca09db8ea6694aee83dc.png";

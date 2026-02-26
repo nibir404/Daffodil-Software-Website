@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import svgPaths from "./svg-pqtkb1xdal";
+import svgPaths from "../assets/svgs/svg-pqtkb1xdal";
 
 interface Message {
   type: "user" | "ai";

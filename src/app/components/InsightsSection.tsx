@@ -1,6 +1,6 @@
 import { useRef, useEffect, useState } from "react";
 import { Link } from "react-router";
-import svgPaths from "../../imports/svg-ugaw4azmqe";
+import svgPaths from "../../assets/svgs/svg-ugaw4azmqe";
 import imgImage61 from "figma:asset/d80fb2985b8e5fe3ece58610c38ac6e3b7c3fac6.png";
 import imgImage62 from "figma:asset/51c3b1a51cb3dc090c475e60ec7af1e01261ddc0.png";
 import imgImage63 from "figma:asset/feab9f0144be05738767103bba60379a87da3aa5.png";

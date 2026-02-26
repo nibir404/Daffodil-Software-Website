@@ -1,4 +1,4 @@
-import svgPaths from "./svg-ek3323p0n9";
+import svgPaths from "../assets/svgs/svg-ek3323p0n9";
 import imgRectangle669 from "figma:asset/ade4cf9084ac38c0bcec758b55b2f13f1be9e134.png";
 
 function WhyChooseUs() {

@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import svgPaths from "../../imports/svg-6v4yn2fvp3";
+import svgPaths from "../../assets/svgs/svg-6v4yn2fvp3";
 
 // Import service card images
 import imgStrategy from "figma:asset/ff46b51640dd59c94f9646f1ca134743027730cb.png";

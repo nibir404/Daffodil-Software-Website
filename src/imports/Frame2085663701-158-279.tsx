@@ -1,4 +1,4 @@
-import svgPaths from "./svg-r48kauc93f";
+import svgPaths from "../assets/svgs/svg-r48kauc93f";
 import imgRectangle690 from "figma:asset/962581dc4020c3e24e6269c4dda08c7e05bcea3d.png";
 
 function Facebook() {

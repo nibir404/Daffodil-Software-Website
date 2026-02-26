@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { Link } from "react-router";
-import svgPaths from "../../imports/svg-mxln3mq9gn";
-import svgPathsDesign from "../../imports/svg-10ns7xk3fr";
-import svgPathsDevelopment from "../../imports/svg-3gqtin07f8";
-import svgPathsAI from "../../imports/svg-3tfns4zh67";
-import svgPathsGrowth from "../../imports/svg-yad1lz0s1j";
-import svgPathsMaintain from "../../imports/svg-2wmzaob8t5";
+import svgPaths from "../../assets/svgs/svg-mxln3mq9gn";
+import svgPathsDesign from "../../assets/svgs/svg-10ns7xk3fr";
+import svgPathsDevelopment from "../../assets/svgs/svg-3gqtin07f8";
+import svgPathsAI from "../../assets/svgs/svg-3tfns4zh67";
+import svgPathsGrowth from "../../assets/svgs/svg-yad1lz0s1j";
+import svgPathsMaintain from "../../assets/svgs/svg-2wmzaob8t5";
 
 interface CategoryItem {
   id: string;

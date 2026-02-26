@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { ChevronDown } from "lucide-react";
 import { Link } from "react-router";
-import svgPaths from "../../imports/svg-odj93ybx11";
+import svgPaths from "../../assets/svgs/svg-odj93ybx11";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 

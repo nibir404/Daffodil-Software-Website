@@ -21,8 +21,8 @@ import imgDaffodilComputers from "figma:asset/c21810431d01748d0c7cc59913c98bd2b5
 import imgHokseed from "figma:asset/edadc830852b6f7bb1a0533cb9600a6f136c5e81.png";
 import imgCardioCare from "figma:asset/68c265633cca5a94c6ee7f27899077a253634d30.png";
 import imgRectangle698 from "figma:asset/20eeed601e2ef036cc8d70161c230af2ca8cb61c.png";
-import svgPaths from "../../imports/svg-bncqmqs37d";
-import svgPathsOffices from "../../imports/svg-4ssu756qf4";
+import svgPaths from "@svgs/svg-bncqmqs37d";
+import svgPathsOffices from "@svgs/svg-4ssu756qf4";
 
 // Trusted By Section - From Single Service Page
 function TrustedBySection() {

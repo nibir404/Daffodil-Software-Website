@@ -2,7 +2,7 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router";
 import imgImage1 from "figma:asset/9e79658364ced9f6944de6225d3b0e0e50b5ad3b.png";
-import svgPaths from "../../imports/svg-kr2unwykat";
+import svgPaths from "../../assets/svgs/svg-kr2unwykat";
 import { SolutionsMegamenu } from "./SolutionsMegamenu";
 import { ProductsMegamenu } from "./ProductsMegamenu";
 import { IndustriesMegamenu } from "./IndustriesMegamenu";

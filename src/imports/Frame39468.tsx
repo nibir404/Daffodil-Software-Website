@@ -1,4 +1,4 @@
-import svgPaths from "./svg-10ns7xk3fr";
+import svgPaths from "../assets/svgs/svg-10ns7xk3fr";
 
 function PaintBoard() {
   return (

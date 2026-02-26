@@ -1,4 +1,4 @@
-import svgPaths from "./svg-03xhpw29hf";
+import svgPaths from "../assets/svgs/svg-03xhpw29hf";
 
 function Group() {
   return (

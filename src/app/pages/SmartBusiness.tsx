@@ -4,8 +4,8 @@ import CTAFormContent from "../../imports/Frame2085663518";
 import { FAQSection } from "../components/FAQSection";
 import { PrimaryCTA, SecondaryCTA } from "../components/CTAButtons";
 import { InsightsSection } from "../components/InsightsSection";
-import svgPaths from "../../imports/svg-sitq8yjpd8";
-import svgPathsViewProducts from "../../imports/svg-rriiw31jtj";
+import svgPaths from "../../assets/svgs/svg-sitq8yjpd8";
+import svgPathsViewProducts from "../../assets/svgs/svg-rriiw31jtj";
 import dashboardImage from "figma:asset/c215c35808eadd0921128385dfd722e3e858a337.png";
 import imgDeshiJamar from "figma:asset/871c154f69889e15b43fb93c8070b6d9a576ac9c.png";
 import imgEastCoast from "figma:asset/a5c2b13c70fd5d181d101755999a189183a22bb4.png";
@@ -15,10 +15,10 @@ import imgComilla from "figma:asset/65858cb6ae73a46e49bd05c666de86628d4b0d50.png
 import imgDaffodilComputers from "figma:asset/c21810431d01748d0c7cc59913c98bd2b59ba95e.png";
 import imgHokseed from "figma:asset/edadc830852b6f7bb1a0533cb9600a6f136c5e81.png";
 import imgCardioCare from "figma:asset/68c265633cca5a94c6ee7f27899077a253634d30.png";
-import svgPathsWhoFor from "../../imports/svg-2lbdl17c7t";
+import svgPathsWhoFor from "../../assets/svgs/svg-2lbdl17c7t";
 import imgRectangle682 from "figma:asset/3cda6d29446a0dd95cddd4bb09dc37ba18c71b1d.png";
-import svgPathsComparison from "../../imports/svg-5gy4xc8zew";
-import svgPathsImplementation from "../../imports/svg-3h6aj6lx8p";
+import svgPathsComparison from "../../assets/svgs/svg-5gy4xc8zew";
+import svgPathsImplementation from "../../assets/svgs/svg-3h6aj6lx8p";
 import imgModulesCode from "figma:asset/556a699ad75247b2eb1dbc7283ee994b8a0149c3.png";
 import imgCtaBackground from "figma:asset/32676907914974532402e69b553da4485fa5f045.png";
 

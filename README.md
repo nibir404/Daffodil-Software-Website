@@ -1,135 +1,110 @@
-# Daffodil Software Ltd - Corporate Website
+# 🏙️ Daffodil Software Ltd - Corporate Platform
 
-A modern, high-performance corporate website built for Daffodil Software Ltd. This project is a feature-rich React application developed from a specialized Figma design, featuring advanced animations, responsive layouts, and a comprehensive suite of services, products, and industry solutions.
+[![React](https://img.shields.io/badge/React-18.x-61DAFB?style=for-the-badge&logo=react)](https://react.dev/)
+[![Vite](https://img.shields.io/badge/Vite-6.x-646CFF?style=for-the-badge&logo=vite)](https://vitejs.dev/)
+[![Tailwind](https://img.shields.io/badge/Tailwind-4.x-06B6D4?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
 
-## 🚀 Quick Start
+A premium, high-performance corporate ecosystem built for **Daffodil Software Ltd**. This application transforms sophisticated Figma designs into a fluid, responsive, and accessible web experience, engineered for scalability and world-class user engagement.
 
-### Prerequisites
+---
 
-- Node.js (Latest LTS recommended)
-- npm or pnpm
+## 🚀 Experience the Performance
 
-### Installation
+### 🛠️ Prerequisites
 
-```bash
-npm install
+- **Node.js**: v18.0 or later (LTS recommended)
+- **Package Manager**: `npm` or `pnpm`
+
+### 🏗️ Setup & Development
+
+1.  **Clone & Install**:
+    ```bash
+    git clone [repository-url]
+    cd "Daffodil Software Ltd"
+    npm install
+    ```
+2.  **Launch Dev Server**:
+
+    ```bash
+    npm run dev
+    ```
+
+    ✨ _Access the dashboard at `http://localhost:5173`_
+
+3.  **Production Build**:
+    ```bash
+    npm run build
+    ```
+    📦 _Optimized assets generated in `/dist`_
+
+---
+
+## � Technical Architecture
+
+### Core Engine
+
+- **Framework**: [React 18](https://react.dev/) for component-driven development.
+- **Routing**: [React Router 7](https://reactrouter.com/) with dynamic route matching and layout persistence.
+- **State Management**: Context API for lightweight, efficient state synchronization across features.
+
+### Aesthetic Design System
+
+- **Tailwind CSS 4**: Utilizing the latest JIT engine for lightning-fast styling and custom theme tokens.
+- **GSAP & Motion**: Orchestrating high-end entrance animations, scroll-triggered effects, and micro-interactions.
+- **Typography**: Premium font sets (Helvetica Now Display, Inter) integrated for maximum readability and brand alignment.
+
+---
+
+## 📂 Structural Intelligence
+
+The project follows a modular architecture designed for clarity and rapid feature isolation:
+
+```mermaid
+graph TD
+    A[src] --> B[app]
+    A --> C[assets]
+    A --> D[imports]
+    A --> E[styles]
+
+    B --> B1[pages]
+    B --> B2[components]
+    B --> B3[context]
+
+    D --> D1[Generated Components]
+    D --> D2[SVG Data]
 ```
 
-### Development
+- **`src/app/pages/`**: Single-responsibility page components.
+- **`src/app/components/`**: Atomic and molecular UI sections.
+- **`src/imports/`**: Design-driven assets and structural blueprints exported from Figma.
+- **`src/assets/`**: High-resolution imagery and static media.
+- **`src/styles/`**: Global theme definitions, utility classes, and typography.
 
-```bash
-npm run dev
-```
+---
 
-The application will be available at `http://localhost:5173`.
+## �️ Smart Path Aliasing
 
-### Build
+Streamlined imports using defined aliases for cleaner, more maintainable code:
 
-```bash
-npm run build
-```
+| Alias           | target                 | Intent                              |
+| :-------------- | :--------------------- | :---------------------------------- |
+| `@/*`           | `src/*`                | Root-level source access            |
+| `@components/*` | `src/app/components/*` | Rapid component instantiation       |
+| `@pages/*`      | `src/app/pages/*`      | Page-level routing                  |
+| `@imports/*`    | `src/imports/*`        | Bridging design with implementation |
+| `figma:asset/*` | `src/assets/*`         | Direct media resolution             |
 
-The production-ready bundle will be generated in the `dist/` directory.
+---
 
-## 🛠 Tech Stack
+## 🎨 Creative Vision
 
-- **Core**: [React 18](https://react.dev/)
-- **Build Tool**: [Vite 6](https://vitejs.dev/)
-- **Routing**: [React Router 7](https://reactrouter.com/)
-- **Styling**:
-  - [Tailwind CSS 4](https://tailwindcss.com/)
-  - [Emotion](https://emotion.sh/) (for MUI/Radix styling)
-- **UI Libraries**:
-  - [Radix UI](https://www.radix-ui.com/) (Primitives)
-  - [Material UI (MUI)](https://mui.com/)
-  - [Lucide React](https://lucide.dev/) (Icons)
-- **Animations**:
-  - [GSAP](https://greensock.com/gsap/)
-  - [Motion](https://motion.dev/) (formerly Framer Motion)
-- **Components**:
-  - [Recharts](https://recharts.org/) (Data Visualization)
-  - [Embla Carousel](https://www.embla-carousel.com/)
-  - [React Hook Form](https://react-hook-form.com/)
+This platform is a direct implementation of the **Daffodil Software Design Language**.
+🔗 [View the Original Figma Masterpiece](https://www.figma.com/design/vCwb5pnlIxpTdYZ8B5H2p1/Daffodil-Software-Ltd)
 
-## 📂 Project Structure
+---
 
-```
-/
-├── index.html              # HTML entry point
-├── vite.config.ts          # Vite + plugin configuration
-├── tsconfig.json           # TypeScript config (app code)
-├── tsconfig.node.json      # TypeScript config (Vite/Node tooling)
-├── package.json
-└── src/
-    ├── main.tsx            # React app entry point
-    ├── assets.d.ts         # Type declarations for figma:asset/* imports
-    ├── app/
-    │   ├── App.tsx         # Root component with RouterProvider
-    │   ├── routes.tsx      # Application routing definitions
-    │   ├── components/     # Reusable/page-level UI components
-    │   │   ├── ui/         # shadcn/ui base components
-    │   │   └── *.tsx       # Feature-specific section components
-    │   └── pages/          # Top-level route page components
-    │       ├── Root.tsx    # Root layout (Header + Outlet + Footer)
-    │       ├── Home.tsx
-    │       ├── About.tsx
-    │       └── ...
-    ├── imports/            # Auto-generated Figma-to-React components & SVG paths
-    │   ├── svg-*.ts        # SVG path data exported from Figma
-    │   ├── HomePage.tsx    # Large Figma frame exports (used as base reference)
-    │   └── ...
-    ├── assets/             # Figma-exported PNG images (referenced via figma:asset/)
-    │   └── *.png
-    └── styles/
-        ├── index.css       # Main CSS entry (imports below)
-        ├── fonts.css       # Font-face declarations
-        ├── tailwind.css    # Tailwind v4 config
-        └── theme.css       # Custom CSS variables / theme tokens
-```
+## � Standards & Contributing
 
-## 🗂 Import Aliases
+We maintain a high bar for code quality and design fidelity. Please review our [Internal Guidelines](./guidelines/Guidelines.md) before submitting pull requests.
 
-The following path aliases are configured in both `vite.config.ts` and `tsconfig.json`:
-
-| Alias           | Maps To                | Usage                     |
-| --------------- | ---------------------- | ------------------------- |
-| `@/*`           | `src/*`                | General src imports       |
-| `@components/*` | `src/app/components/*` | Section/UI components     |
-| `@pages/*`      | `src/app/pages/*`      | Page components           |
-| `@imports/*`    | `src/imports/*`        | Figma-generated code      |
-| `figma:asset/*` | `src/assets/*`         | Figma-exported PNG images |
-
-### Using Aliases
-
-```tsx
-// Instead of relative paths:
-import { Hero } from "../../app/components/Hero";
-
-// Use aliases:
-import { Hero } from "@components/Hero";
-```
-
-## 🖼 Asset Handling
-
-All PNG images exported from Figma live in `src/assets/` and are imported using the `figma:asset/` prefix:
-
-```tsx
-import myImage from "figma:asset/abc123.png";
-// Resolves to: src/assets/abc123.png
-```
-
-If an asset is missing (not exported from Figma), comment out its import and use a stub:
-
-```tsx
-// import flutterIcon from 'figma:asset/missing-hash.png';
-const flutterIcon = ""; // Missing asset stub
-```
-
-## 🎨 Design Reference
-
-The original design for this project can be found on Figma:
-[Daffodil Software Ltd - Figma Design](https://www.figma.com/design/vCwb5pnlIxpTdYZ8B5H2p1/Daffodil-Software-Ltd)
-
-## 📄 Documentation
-
-For more detailed information about the architecture and development guidelines, please refer to the [Internal Guidelines](./guidelines/Guidelines.md).
+&copy; 2026 Daffodil Software Ltd. All rights reserved.

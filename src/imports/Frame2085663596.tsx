@@ -1,4 +1,4 @@
-import svgPaths from "./svg-kr2unwykat";
+import svgPaths from "../assets/svgs/svg-kr2unwykat";
 import imgImage1 from "figma:asset/9e79658364ced9f6944de6225d3b0e0e50b5ad3b.png";
 
 function Frame2() {

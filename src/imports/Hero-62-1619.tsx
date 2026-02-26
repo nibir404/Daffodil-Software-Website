@@ -1,4 +1,4 @@
-import svgPaths from "./svg-r30da9571z";
+import svgPaths from "../assets/svgs/svg-r30da9571z";
 
 function AiBall() {
   return (

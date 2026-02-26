@@ -27,6 +27,7 @@
       "@components/*": ["src/app/components/*"],
       "@pages/*": ["src/app/pages/*"],
       "@imports/*": ["src/imports/*"],
+      "@svgs/*": ["src/assets/svgs/*"],
       "@assets/*": ["src/assets/*"],
       "@styles/*": ["src/styles/*"],
       "@hooks/*": ["src/hooks/*"],

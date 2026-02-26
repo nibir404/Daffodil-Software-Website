@@ -1,4 +1,4 @@
-import svgPaths from "./svg-0gz09ijv7a";
+import svgPaths from "../assets/svgs/svg-0gz09ijv7a";
 
 function Frame10() {
   return (

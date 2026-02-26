@@ -1,4 +1,4 @@
-import svgPaths from "./svg-vrs4ws700k";
+import svgPaths from "../assets/svgs/svg-vrs4ws700k";
 import imgImage57 from "figma:asset/90090fd64c815b759af9b862ff05a9433d159c53.png";
 
 function Frame6() {

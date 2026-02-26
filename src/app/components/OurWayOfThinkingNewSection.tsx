@@ -1,4 +1,4 @@
-import svgPaths from "../../imports/svg-ojke49rdqy";
+import svgPaths from "../../assets/svgs/svg-ojke49rdqy";
 
 function AiContentGenerator() {
   return (

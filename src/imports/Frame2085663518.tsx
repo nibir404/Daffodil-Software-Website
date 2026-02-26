@@ -1,4 +1,4 @@
-import svgPaths from "./svg-k8vvy4k97a";
+import svgPaths from "../assets/svgs/svg-k8vvy4k97a";
 import { useState } from "react";
 
 function Frame5() {

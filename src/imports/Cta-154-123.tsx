@@ -1,4 +1,4 @@
-import svgPaths from "./svg-0bxa5wlq1n";
+import svgPaths from "../assets/svgs/svg-0bxa5wlq1n";
 import imgImage57 from "figma:asset/90090fd64c815b759af9b862ff05a9433d159c53.png";
 
 function Frame5() {

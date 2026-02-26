@@ -1,4 +1,4 @@
-import svgPaths from "./svg-5rg4melgih";
+import svgPaths from "../assets/svgs/svg-5rg4melgih";
 import imgImage57 from "figma:asset/90090fd64c815b759af9b862ff05a9433d159c53.png";
 import imgImage1 from "figma:asset/9e79658364ced9f6944de6225d3b0e0e50b5ad3b.png";
 import imgImage35 from "figma:asset/2516de018ffa3072ce276d1f94f901c9c0bcc638.png";

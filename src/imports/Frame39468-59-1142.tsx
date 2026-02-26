@@ -1,4 +1,4 @@
-import svgPaths from "./svg-yad1lz0s1j";
+import svgPaths from "../assets/svgs/svg-yad1lz0s1j";
 
 function ChartUp() {
   return (

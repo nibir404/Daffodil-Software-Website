@@ -1,4 +1,4 @@
-import svgPaths from "./svg-grohrkkzxi";
+import svgPaths from "../assets/svgs/svg-grohrkkzxi";
 
 function ArrowDown() {
   return (

@@ -1,4 +1,4 @@
-import svgPaths from "./svg-rcpnf7sagi";
+import svgPaths from "../assets/svgs/svg-rcpnf7sagi";
 import imgRectangle704 from "figma:asset/3df84f1e7b899de4f6ae8cd126704d362dc45f63.png";
 
 function Eye() {

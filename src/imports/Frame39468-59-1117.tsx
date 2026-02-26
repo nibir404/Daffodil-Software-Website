@@ -1,4 +1,4 @@
-import svgPaths from "./svg-3tfns4zh67";
+import svgPaths from "../assets/svgs/svg-3tfns4zh67";
 
 function MagicWand() {
   return (

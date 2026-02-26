@@ -1,7 +1,7 @@
 import { FAQSection } from "../../components/FAQSection";
-import svgPaths from "../../../imports/svg-oc3bcnf80y";
-import svgPathsHero from "../../../imports/svg-p7xrrkor7f";
-import svgPathsInstitutions from "../../../imports/svg-uj8p6sl559";
+import svgPaths from "../../../assets/svgs/svg-oc3bcnf80y";
+import svgPathsHero from "../../../assets/svgs/svg-p7xrrkor7f";
+import svgPathsInstitutions from "../../../assets/svgs/svg-uj8p6sl559";
 import imgRectangle687 from "figma:asset/4e56b05061d95edad9421edea6df3f3ac05960cf.png";
 import imgRectangle688 from "figma:asset/73cab8ee37cb976f0aa9923b2afd9b8dbacc2e6e.png";
 import imgImage57 from "figma:asset/90090fd64c815b759af9b862ff05a9433d159c53.png";

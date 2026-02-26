@@ -1,4 +1,4 @@
-import svgPaths from "./svg-wldjp3z7m7";
+import svgPaths from "../assets/svgs/svg-wldjp3z7m7";
 
 function MenuArrowRight1() {
   return (

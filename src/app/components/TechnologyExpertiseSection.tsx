@@ -1,4 +1,4 @@
-import svgPaths from "../../imports/svg-f0ulzcw64y";
+import svgPaths from "../../assets/svgs/svg-f0ulzcw64y";
 
 // Import technology icon images
 import angularIcon from "figma:asset/0563dd966aad880dfc1fc78ab7b4646645baeaa7.png";

@@ -1,4 +1,4 @@
-import svgPaths from "./svg-p7xrrkor7f";
+import svgPaths from "../assets/svgs/svg-p7xrrkor7f";
 import imgImage78 from "figma:asset/b07939406d564d7731d11d7049c6203176375763.png";
 
 function GlobalEducation() {

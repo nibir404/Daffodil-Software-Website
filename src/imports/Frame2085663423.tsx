@@ -1,4 +1,4 @@
-import svgPaths from "./svg-odj93ybx11";
+import svgPaths from "../assets/svgs/svg-odj93ybx11";
 
 function ArrowRight() {
   return (

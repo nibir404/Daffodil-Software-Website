@@ -1,4 +1,4 @@
-import svgPaths from "../../imports/svg-ft5evtsgo9";
+import svgPaths from "../../assets/svgs/svg-ft5evtsgo9";
 import { ArrowRight } from "lucide-react";
 
 interface Industry {

@@ -1,4 +1,4 @@
-import svgPaths from "./svg-ze15q5bbhp";
+import svgPaths from "../assets/svgs/svg-ze15q5bbhp";
 import imgRectangle689 from "figma:asset/4da52a89d96f70de821349dad640b3eb999d7534.png";
 
 function Frame() {

@@ -1,4 +1,4 @@
-import svgPaths from "./svg-2wmzaob8t5";
+import svgPaths from "../assets/svgs/svg-2wmzaob8t5";
 
 function Component3DScale() {
   return (

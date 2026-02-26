@@ -1,4 +1,4 @@
-import svgPaths from "./svg-3gqtin07f8";
+import svgPaths from "../assets/svgs/svg-3gqtin07f8";
 
 function SourceCode() {
   return (

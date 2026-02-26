@@ -1,4 +1,4 @@
-import svgPaths from "./svg-r59u30ztd3";
+import svgPaths from "../assets/svgs/svg-r59u30ztd3";
 
 export default function Scroller() {
   return (

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useParams } from "react-router";
-import svgPaths from "../../imports/svg-r48kauc93f";
+import svgPaths from "../../assets/svgs/svg-r48kauc93f";
 import imgRectangle690 from "figma:asset/962581dc4020c3e24e6269c4dda08c7e05bcea3d.png";
 import imgImage61 from "figma:asset/d80fb2985b8e5fe3ece58610c38ac6e3b7c3fac6.png";
 import imgImage62 from "figma:asset/51c3b1a51cb3dc090c475e60ec7af1e01261ddc0.png";

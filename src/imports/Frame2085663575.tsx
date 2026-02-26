@@ -1,4 +1,4 @@
-import svgPaths from "./svg-uj8p6sl559";
+import svgPaths from "../assets/svgs/svg-uj8p6sl559";
 
 function University() {
   return (

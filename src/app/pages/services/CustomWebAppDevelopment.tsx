@@ -1,10 +1,10 @@
 import { CTASection } from "../../components/CTASection";
 import { PrimaryCTA } from "../../components/CTAButtons";
-import svgPaths from "../../../imports/svg-wej6h03ams";
-import svgPathsService from "../../../imports/svg-8sbgxxqm5x";
-import svgPathsChallenges from "../../../imports/svg-b4q0q7teyo";
-import svgPathsChallenges2 from "../../../imports/svg-18i0t4oyye";
-import svgPathsWorkWith from "../../../imports/svg-y701l5ol2e";
+import svgPaths from "../../../assets/svgs/svg-wej6h03ams";
+import svgPathsService from "../../../assets/svgs/svg-8sbgxxqm5x";
+import svgPathsChallenges from "../../../assets/svgs/svg-b4q0q7teyo";
+import svgPathsChallenges2 from "../../../assets/svgs/svg-18i0t4oyye";
+import svgPathsWorkWith from "../../../assets/svgs/svg-y701l5ol2e";
 import imgRectangle683 from "figma:asset/3dd569afee3b5bc7c5d583b363e834502d802ea7.png";
 import imgImage76 from "figma:asset/713ddf1d49ef2405bdadc0b93c67d6a51b4a8ad4.png";
 import imgImage22 from "figma:asset/b3a76efb62e40b6c12695c1680be963ca0a490ce.png";
