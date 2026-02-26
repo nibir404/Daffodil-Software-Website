@@ -1,6 +1,6 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import { Link, useLocation } from "react-router";
+import { Link } from "react-router";
 import imgImage1 from "figma:asset/9e79658364ced9f6944de6225d3b0e0e50b5ad3b.png";
 import svgPaths from "../../imports/svg-kr2unwykat";
 import { SolutionsMegamenu } from "./SolutionsMegamenu";
@@ -115,15 +115,6 @@ export function Header() {
 
             {/* Right Side Actions */}
             <div className="hidden lg:flex items-center gap-[10px] shrink-0">
-              {/* Theme Changer */}
-              <div className="bg-[#01e067] flex items-center justify-center rounded-[10px] size-[52px] relative group hover:bg-[#00c757] transition-colors cursor-pointer">
-                <svg className="size-[24px]" fill="none" preserveAspectRatio="none" viewBox="0 0 24 24">
-                  <path d={svgPaths.p3e199800} stroke="white" strokeWidth="1.5" />
-                  <path d={svgPaths.p262d5c00} stroke="white" strokeLinecap="round" strokeWidth="1.5" />
-                </svg>
-                <div className="absolute inset-0 pointer-events-none rounded-[10px] shadow-[inset_0px_0px_4px_0px_#32ffdd]" />
-              </div>
-              
               {/* Desktop CTA */}
               <Link to="/contact" className="hidden lg:flex h-[48px]">
                 <div className="bg-[#01e067] flex gap-[10px] items-center overflow-hidden pl-[24px] pr-[8px] py-[6px] rounded-[80px] relative h-full group hover:bg-[#00c757] transition-colors">

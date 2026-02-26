@@ -24,27 +24,27 @@ export function WhyOrganizationsChooseSection() {
 
       {/* Main content */}
       <div className="max-w-[1520px] mx-auto px-6 md:px-12 lg:px-24 xl:px-[100px] py-12 md:py-16 lg:py-[100px] relative">
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-[50px] items-center justify-center">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-[60px] items-center lg:items-stretch justify-center">
           {/* Left: Image */}
-          <div className="relative w-full max-w-[600px] lg:w-[600px] shrink-0">
-            <div className="relative rounded-[12px] md:rounded-[16px] lg:rounded-[20px] aspect-[810/965]">
+          <div className="relative w-full max-w-[600px] lg:flex-1 shrink-0">
+            <div className="relative rounded-[12px] md:rounded-[16px] lg:rounded-[20px] h-full">
               <div aria-hidden="true" className="absolute border-[3px] md:border-[4px] lg:border-5 border-[rgba(44,246,152,0.75)] border-solid inset-[-3px] md:inset-[-4px] lg:inset-[-5px] pointer-events-none rounded-[15px] md:rounded-[19px] lg:rounded-[25px] z-10" />
               <img 
                 alt="Abstract 3D geometric shapes representing innovation and technology" 
-                className="absolute inset-0 w-full h-full object-cover rounded-[12px] md:rounded-[16px] lg:rounded-[20px]" 
+                className="w-full h-full object-cover rounded-[12px] md:rounded-[16px] lg:rounded-[20px]" 
                 src={imgRectangle669} 
               />
             </div>
           </div>
 
           {/* Right: Content */}
-          <div className="flex flex-col gap-6 md:gap-8 lg:gap-[32px] w-full max-w-[600px] lg:w-[600px] shrink-0">
+          <div className="flex flex-col gap-6 md:gap-8 lg:gap-[32px] w-full max-w-[600px] lg:max-w-none lg:flex-1 shrink-0">
             {/* Heading and description */}
             <div className="flex flex-col gap-3 md:gap-4 lg:gap-[16px]">
               <h2 className="font-['Helvetica_Now_Display',sans-serif] font-medium text-[28px] sm:text-[36px] md:text-[44px] lg:text-[56px] leading-[1.2] lg:leading-[65px] text-[#111]">
                 Why Organizations Choose DSL
               </h2>
-              <p className="font-['Inter',sans-serif] font-normal text-[14px] md:text-base leading-[24px] md:leading-[30px] text-[#3c3c3c] max-w-[480px]">
+              <p className="font-['Inter',sans-serif] font-normal text-[14px] md:text-base leading-[24px] md:leading-[30px] text-[#3c3c3c] max-w-[650px]">
                 Organizations choose DSL for predictable delivery, secure system architecture, and long-term support across enterprise and public sector projects.
               </p>
             </div>

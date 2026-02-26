@@ -12,6 +12,7 @@ import { Blog } from "./pages/Blog";
 import { SingleBlog } from "./pages/SingleBlog";
 import { CaseStudies } from "./pages/CaseStudies";
 import { SingleCaseStudy } from "./pages/SingleCaseStudy";
+import { FAQ } from "./pages/FAQ";
 import { Contact } from "./pages/Contact";
 import { TermsAndConditions } from "./pages/TermsAndConditions";
 
@@ -81,6 +82,10 @@ export const router = createBrowserRouter([
       {
         path: "case-studies/:slug",
         Component: SingleCaseStudy
+      },
+      {
+        path: "faq",
+        Component: FAQ
       },
       {
         path: "portfolio",

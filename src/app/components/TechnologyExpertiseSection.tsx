@@ -137,7 +137,7 @@ function LogosTailwind() {
     <div className="flex items-center justify-center size-[40px]">
       <svg className="size-[40px]" fill="none" preserveAspectRatio="none" viewBox="0 0 40 40">
         <g clipPath="url(#clip0_tailwind)">
-          <path d={svgPaths.p1e5fe280} fill="url(#paint0_linear_tailwind)" fillRule="evenodd" />
+          <path d={svgPaths.p33a12b00} fill="url(#paint0_linear_tailwind)" fillRule="evenodd" />
         </g>
         <defs>
           <linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_tailwind" x1="0" x2="40" y1="0" y2="40">

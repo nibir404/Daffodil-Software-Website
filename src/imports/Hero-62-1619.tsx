@@ -46,7 +46,7 @@ function AiBall() {
 
 function Frame5() {
   return (
-    <div className="absolute h-[800px] left-[1162px] top-0 w-[758px]">
+    <div className="absolute h-[800px] left-[1165px] top-0 w-[758px]">
       <AiBall />
     </div>
   );
@@ -54,8 +54,8 @@ function Frame5() {
 
 function Frame() {
   return (
-    <div className="content-stretch flex flex-col font-['Helvetica_Now_Display:Medium',sans-serif] items-start justify-center leading-[normal] pb-[20px] relative shrink-0 text-[#111] text-[64px] w-full">
-      <p className="relative shrink-0">We Build Software That Holds Up</p>
+    <div className="content-stretch flex flex-col font-['Helvetica_Now_Display:Medium',sans-serif] items-start justify-center leading-[1.1] pb-[20px] relative shrink-0 text-[#111] text-[40px] md:text-[54px] lg:text-[64px] w-full">
+      <p className="relative shrink-0 whitespace-nowrap">We Build Software That Holds Up</p>
       <p className="relative shrink-0">Under Real-World Complexity</p>
     </div>
   );
@@ -65,7 +65,7 @@ function Frame3() {
   return (
     <div className="content-stretch flex flex-col gap-[24px] items-start justify-center not-italic relative shrink-0 w-full">
       <Frame />
-      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[30px] relative shrink-0 text-[#3c3c3c] text-[20px] w-[644px] whitespace-pre-wrap">DSL is a technology partner focused on designing and engineering digital systems that remain stable, adaptable, and relevant as organizations grow, restructure, and scale globally.</p>
+      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[30px] relative shrink-0 text-[#3c3c3c] text-[18px] md:text-[20px] max-w-[644px] w-full whitespace-pre-wrap">DSL is a technology partner focused on designing and engineering digital systems that remain stable, adaptable, and relevant as organizations grow, restructure, and scale globally.</p>
     </div>
   );
 }
@@ -88,7 +88,7 @@ function Frame2() {
 
 function Frame1() {
   return (
-    <div className="-translate-y-1/2 absolute content-stretch flex flex-col items-start justify-center left-[200px] top-1/2 w-[932px]">
+    <div className="-translate-y-1/2 absolute content-stretch flex flex-col items-start justify-center left-[200px] top-1/2 w-full lg:w-[1200px]">
       <Frame2 />
     </div>
   );

@@ -205,12 +205,13 @@ export function SingleCaseStudy() {
 
   return (
     <div className="bg-white min-h-screen">
-      {/* Hero Section */}
+      {/* Project Details Section with Sticky Sidebar */}
       <section className="px-6 md:px-12 lg:px-24 xl:px-[100px] pt-12 md:pt-16 lg:pt-20 pb-12 md:pb-16 max-w-[1520px] mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-[390px_1fr] gap-8 lg:gap-12">
-          {/* Left Sidebar - Project Info */}
-          <div className="order-2 lg:order-1">
-            <div className="bg-[#f5f5f7] rounded-[10px] p-[40px] sticky top-20 md:top-24 self-start z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-[390px_1fr] gap-8 lg:gap-12 items-start">
+          
+          {/* Left Sidebar - Project Info (Sticky) */}
+          <div className="order-2 lg:order-1 lg:sticky lg:top-24 self-start">
+            <div className="bg-[#f5f5f7] rounded-[10px] p-[40px]">
               {/* Company */}
               <div className="mb-6">
                 <p className="font-['Helvetica_Now_Display',sans-serif] font-medium text-[20px] text-[#3c3c3c] uppercase mb-4">
@@ -288,32 +289,23 @@ export function SingleCaseStudy() {
             </div>
           </div>
 
-          {/* Right Content - Hero */}
-          <div className="order-1 lg:order-2">
-            <h1 className="font-['Helvetica_Now_Display',sans-serif] font-medium text-[40px] md:text-[56px] lg:text-[64px] leading-[1.1] text-[#111] mb-6">
-              Bangladesh National Cadet Core (BNCC)
-            </h1>
-            
-            {/* Featured Image */}
-            <div className="relative h-[400px] md:h-[500px] lg:h-[600px] rounded-[10px] overflow-hidden border-2 border-[rgba(0,0,0,0.2)]" ref={heroRef}>
-              <img
-                src={imgHero}
-                alt="BNCC Project"
-                className="w-full h-full object-cover"
-              />
+          {/* Right Content - Full Case Study Body */}
+          <div className="order-1 lg:order-2 flex flex-col gap-[44px]">
+            {/* Project Title & Hero Image */}
+            <div className="flex flex-col gap-[32px]">
+              <h1 className="font-['Helvetica_Now_Display',sans-serif] font-medium text-[40px] md:text-[56px] lg:text-[64px] leading-[1.1] text-[#111]">
+                Bangladesh National Cadet Core (BNCC)
+              </h1>
+              
+              <div className="relative h-[400px] md:h-[500px] lg:h-[600px] rounded-[10px] overflow-hidden border-2 border-[rgba(0,0,0,0.2)]" ref={heroRef}>
+                <img
+                  src={imgHero}
+                  alt="BNCC Project"
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Main Content */}
-      <section className="px-6 md:px-12 lg:px-24 xl:px-[100px] pb-12 md:pb-16 max-w-[1520px] mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-[390px_1fr] gap-8 lg:gap-12">
-          {/* Empty space for sidebar alignment */}
-          <div className="hidden lg:block" />
-          
-          {/* Content */}
-          <div className="flex flex-col gap-[44px]">
             {/* Project Description */}
             <p className="font-['Inter',sans-serif] font-normal text-[20px] leading-[30px] text-[#3c3c3c]">
               A centralized university management platform designed to connect academic, administrative, and operational functions into a single digital ecosystem supporting efficiency, transparency, and long-term scalability.

@@ -61,6 +61,7 @@ export function Footer() {
                 <a href="#portfolio" className="hover:text-[#111] transition-colors">Portfolio</a>
                 <a href="#privacy" className="hover:text-[#111] transition-colors">Privacy Policy</a>
                 <Link to="/contact" className="hover:text-[#111] transition-colors">Contact</Link>
+                <Link to="/faq" className="hover:text-[#111] transition-colors">FAQ</Link>
                 <a href="#cookies" className="hover:text-[#111] transition-colors">Cookie Policy</a>
               </div>
             </div>

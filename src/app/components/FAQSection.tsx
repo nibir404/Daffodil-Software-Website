@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { ChevronDown } from "lucide-react";
+import { Link } from "react-router";
 import svgPaths from "../../imports/svg-odj93ybx11";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -204,7 +205,7 @@ export function FAQSection() {
             <h2 className="font-['Helvetica_Now_Display'] font-medium text-[36px] md:text-[48px] lg:text-[64px] text-[#111] leading-[1.17]">
               Frequently Asked Questions
             </h2>
-            <a href="#all-faqs">
+            <Link to="/faq">
               <div className="bg-[#01e067] flex gap-[10px] items-center overflow-hidden pl-[24px] pr-[8px] py-[6px] rounded-[80px] relative h-[48px] md:h-[52px] group hover:bg-[#00c757] transition-colors w-fit">
                 {/* Light flare animation */}
                 <div className="absolute flex h-[130.588px] items-center justify-center left-[calc(50%-105.63px)] mix-blend-plus-lighter top-[-27.29px] w-[126.735px] group-hover:animate-[flare_0.6s_ease-in-out]">
@@ -237,7 +238,7 @@ export function FAQSection() {
                   </svg>
                 </div>
               </div>
-            </a>
+            </Link>
           </div>
 
           {/* Right Column - FAQ Items */}
