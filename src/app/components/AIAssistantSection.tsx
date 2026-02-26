@@ -46,7 +46,7 @@ export function AIAssistantSection() {
               <div className="absolute inset-0 bg-gradient-radial from-[rgba(59,130,246,0.3)] via-[rgba(37,99,235,0.15)] to-transparent blur-3xl"></div>
             </div>
 
-            <div className="w-[1200px] h-[600px] mx-auto relative z-10">
+            <div className="w-full max-w-[1400px] h-[600px] mx-auto relative z-10">
               <AiFlow />
             </div>
           </div>

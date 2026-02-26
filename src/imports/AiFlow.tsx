@@ -285,7 +285,7 @@ export default function AiFlow() {
           <div className="absolute left-1/2 top-[35%] -translate-x-1/2 -translate-y-1/2 w-[240px] h-[240px]">
             <AiBall isThinking={false} />
           </div>
-          <div className="absolute content-stretch flex gap-[12px] items-center justify-center left-[16px] right-[16px] bottom-[88px]">
+          <div className="absolute content-stretch flex gap-[12px] items-center justify-start left-[16px] right-[16px] bottom-[88px]">
             {suggestionQuestions.map((question, index) => (
               <SuggestionPill 
                 key={index} 
