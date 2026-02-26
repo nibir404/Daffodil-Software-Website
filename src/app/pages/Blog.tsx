@@ -79,14 +79,14 @@ function BlogHero() {
                 <p className="font-['Inter'] text-sm md:text-base lg:text-[20px] leading-[1.5] text-white">
                   Most systems fail quietly under growth, not bugs. This article breaks down how early architecture choices decide whether a product scales with confidence or collapses under pressure.
                 </p>
-                <div className="flex gap-2 md:gap-[10px] items-center py-2 group-hover:gap-3 md:group-hover:gap-[14px] transition-all duration-300">
+                <div className="flex gap-2 md:gap-[15px] items-center py-2 group-hover:gap-3 md:group-hover:gap-[20px] transition-all duration-300">
                   <p className="font-['Helvetica_Now_Display'] font-medium text-sm md:text-[16px] leading-normal text-white">
                     Read Full Article
                   </p>
-                  <div className="size-4 md:size-[16px]">
-                    <svg className="block size-full" fill="none" viewBox="0 0 16 16">
+                  <div className="bg-[#111] rounded-[6px] size-8 md:size-10 flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110">
+                    <svg className="size-4 md:size-5" fill="none" viewBox="0 0 16 16">
                       <path d="M12.3321 8H3.33203" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
-                      <path d={svgPaths.p8187a80} stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
+                      <path d="M8.66797 12C8.66797 12 12.668 9.05407 12.668 8C12.668 6.94587 8.66797 4 8.66797 4" stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" />
                     </svg>
                   </div>
                 </div>
