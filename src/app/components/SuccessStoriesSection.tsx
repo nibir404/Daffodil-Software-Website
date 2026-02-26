@@ -201,7 +201,7 @@ export function SuccessStoriesSection() {
       <div className="px-6 md:px-12 lg:px-24 xl:px-[100px] relative z-10">
         <div className="max-w-[1520px] mx-auto">
           {/* Header Section */}
-          <div className="content-stretch flex gap-[10px] items-start py-[10px] mb-[60px] w-full max-w-[1400px] mx-auto">
+          <div className="content-stretch flex gap-[10px] items-center py-[10px] mb-[60px] w-full max-w-[1400px] mx-auto">
             <SectionHeader />
             <ViewAllButton />
           </div>
