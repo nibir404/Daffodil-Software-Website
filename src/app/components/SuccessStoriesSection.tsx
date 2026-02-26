@@ -4,7 +4,7 @@ import imgRectangle5 from "figma:asset/93bd53fc3a66870f52cc030f69da770da8cce477.
 
 function SectionHeader() {
   return (
-    <div className="content-stretch flex flex-col gap-[20px] items-start not-italic text-white whitespace-pre-wrap flex-1">
+    <div className="content-stretch flex flex-col gap-[20px] items-start not-italic text-white whitespace-pre-wrap">
       <h2 className="font-['Helvetica_Now_Display'] font-medium leading-[75px] text-[64px] w-[723px]">
         Featured Success Stories
       </h2>
@@ -147,7 +147,7 @@ function ReadCaseStudyButton() {
 
 function CaseStudyCard() {
   return (
-    <div className="h-[680px] relative rounded-[20px] shrink-0 w-full max-w-[1400px] group cursor-pointer">
+    <div className="h-[680px] relative rounded-[20px] shrink-0 w-full max-w-[1400px] group cursor-pointer mx-auto">
       <div className="overflow-clip relative rounded-[inherit] size-full">
         {/* Background Image with Gradient Overlay */}
         <div className="absolute inset-0 rounded-[20px]">
@@ -201,7 +201,7 @@ export function SuccessStoriesSection() {
       <div className="px-6 md:px-12 lg:px-24 xl:px-[100px] relative z-10">
         <div className="max-w-[1520px] mx-auto">
           {/* Header Section */}
-          <div className="content-stretch flex gap-[10px] items-center py-[10px] mb-[60px] w-full max-w-[1400px] mx-auto">
+          <div className="content-stretch flex gap-[10px] items-center justify-between py-[10px] mb-[60px] w-full max-w-[1400px] mx-auto">
             <SectionHeader />
             <ViewAllButton />
           </div>
