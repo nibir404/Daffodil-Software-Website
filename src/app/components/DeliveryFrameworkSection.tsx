@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import svgPaths from "../../assets/svgs/svg-03xhpw29hf";
@@ -156,7 +156,7 @@ export function DeliveryFrameworkSection() {
     }
 
     const ctx = gsap.context(() => {
-      // Header animation - simple fade in on initial view
+      // Header animation
       gsap.from(headerRef.current, {
         opacity: 0,
         y: 20,
@@ -170,16 +170,13 @@ export function DeliveryFrameworkSection() {
         }
       });
 
-      // Stage items - animate each step independently as user scrolls
+      // Stage items animation (Desktop)
       const stageItems = gsap.utils.toArray<HTMLElement>("[data-stage]");
-      
-      // Group stages in pairs (icon + text for each step)
       for (let i = 0; i < stageItems.length; i += 2) {
         const textElement = stageItems[i];
         const iconElement = stageItems[i + 1];
         const isRight = textElement.getAttribute("data-stage-position") === "right";
         
-        // Animate text content
         gsap.from(textElement, {
           opacity: 0,
           x: isRight ? 40 : -40,
@@ -193,7 +190,6 @@ export function DeliveryFrameworkSection() {
           }
         });
 
-        // Animate icon
         gsap.from(iconElement, {
           opacity: 0,
           x: isRight ? -40 : 40,
@@ -207,6 +203,23 @@ export function DeliveryFrameworkSection() {
           }
         });
       }
+
+      // Mobile items animation
+      const mobileItems = gsap.utils.toArray<HTMLElement>(".mobile-stage-item");
+      mobileItems.forEach((item) => {
+        gsap.from(item, {
+          opacity: 0,
+          y: 30,
+          duration: 0.6,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: item,
+            start: "top 85%",
+            toggleActions: "play none none none",
+            once: true
+          }
+        });
+      });
 
       // Bottom message animation
       gsap.from(bottomMessageRef.current, {
@@ -226,13 +239,46 @@ export function DeliveryFrameworkSection() {
     return () => ctx.revert();
   }, []);
 
+  const stages = [
+    {
+      title: "Discovery & Consultation",
+      description: "Understanding goals, challenges, and constraints.",
+      icon: <SearchIcon />,
+      side: "right"
+    },
+    {
+      title: "Strategy & Planning",
+      description: "Translating needs into a clear technical roadmap.",
+      icon: <CanvasIcon />,
+      side: "left"
+    },
+    {
+      title: "Design & Development",
+      description: "Agile execution with transparency and collaboration.",
+      icon: <WebDesignIcon />,
+      side: "right"
+    },
+    {
+      title: "Testing & Deployment",
+      description: "Ensuring quality, security, and performance.",
+      icon: <TestTubeIcon />,
+      side: "left"
+    },
+    {
+      title: "Support & Optimization",
+      description: "Long-term partnership beyond launch.",
+      icon: <MentoringIcon />,
+      side: "right"
+    }
+  ];
+
   return (
-    <section ref={sectionRef} className="bg-[#0d1e32] relative py-16 md:py-20 lg:py-24 overflow-hidden">
+    <section ref={sectionRef} className="bg-[#0d1e32] relative py-12 md:py-20 lg:py-24 overflow-hidden">
       {/* Gradient Bars Background */}
       <GradientBars />
 
       {/* Blue Radial Glow */}
-      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[1318px] h-[1318px] pointer-events-none">
+      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[1318px] h-[1318px] pointer-events-none opacity-50 md:opacity-100">
         <div className="absolute inset-[-30.35%]">
           <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 2118 2118">
             <g filter="url(#filter0_f_delivery_bg)">
@@ -253,116 +299,95 @@ export function DeliveryFrameworkSection() {
       <div className="relative z-10 px-6 md:px-12 lg:px-24 xl:px-[100px]">
         <div className="max-w-[1520px] mx-auto">
           {/* Header */}
-          <div ref={headerRef} className="flex flex-col gap-6 items-center text-center mb-[100px]">
-            <h2 className="font-['Helvetica_Now_Display'] font-medium text-[64px] leading-[75px] text-white">
+          <div ref={headerRef} className="flex flex-col gap-4 md:gap-6 items-center text-center mb-12 md:mb-[100px]">
+            <h2 className="font-['Helvetica_Now_Display'] font-medium text-[32px] md:text-[48px] lg:text-[64px] leading-tight lg:leading-[75px] text-white">
               Our Delivery Framework
             </h2>
-            <p className="font-['Inter'] font-normal text-[16px] leading-[30px] text-white max-w-[702px]">
+            <p className="font-['Inter'] font-normal text-[14px] md:text-[16px] leading-relaxed md:leading-[30px] text-white/80 max-w-[702px]">
               Our software development process follows enterprise-grade standards with clear milestones, documentation, and quality assurance.
             </p>
           </div>
 
-          {/* Timeline */}
-          <div ref={timelineRef} className="relative h-[1125px] w-[1044px] mx-auto mb-[100px]">
-            {/* Vertical Line - Structural, no animation */}
+          {/* Desktop Timeline - Visible on XL screens */}
+          <div ref={timelineRef} className="hidden xl:block relative h-[1125px] w-[1044px] mx-auto mb-[100px]">
+            {/* Vertical Line */}
             <div className="absolute bg-[rgba(255,255,255,0.2)] h-[1050px] left-1/2 -translate-x-1/2 rounded-[60px] top-[43px] w-[24px]" />
 
-            {/* Glow Dots - Structural, no animation */}
-            <div className="absolute left-[492px] size-[60px] top-[13px]">
-              <GlowDot />
-            </div>
-            <div className="absolute left-[492px] size-[60px] top-[273px]">
-              <GlowDot />
-            </div>
-            <div className="absolute left-[492px] size-[60px] top-[533px]">
-              <GlowDot />
-            </div>
-            <div className="absolute left-[492px] size-[60px] top-[793px]">
-              <GlowDot />
-            </div>
-            <div className="absolute left-[492px] size-[60px] top-[1053px]">
-              <GlowDot />
-            </div>
-
-            {/* Stage 1: Discovery & Consultation */}
-            <div data-stage data-stage-position="right" className="absolute left-[572px] top-0 w-[472px]">
-              <div className="flex flex-col gap-2">
-                <h3 className="font-['Helvetica_Now_Display'] font-medium text-[36px] text-white">
-                  Discovery & Consultation
-                </h3>
-                <p className="font-['Inter'] font-normal text-[20px] text-white">
-                  Understanding goals, challenges, and constraints.
-                </p>
+            {/* Glow Dots */}
+            {[13, 273, 533, 793, 1053].map((top, i) => (
+              <div key={i} className="absolute left-[492px] size-[60px]" style={{ top: `${top}px` }}>
+                <GlowDot />
               </div>
-            </div>
-            <div data-stage data-stage-position="left" className="absolute bg-[rgba(255,255,255,0.1)] flex items-center justify-center left-[392px] rounded-[10px] size-[80px] top-[3px] border border-[rgba(44,246,152,0.75)]">
-              <SearchIcon />
-            </div>
+            ))}
 
-            {/* Stage 2: Strategy & Planning */}
-            <div data-stage data-stage-position="left" className="absolute left-0 top-[260px] w-[472px] text-right">
-              <div className="flex flex-col gap-2 items-end">
-                <h3 className="font-['Helvetica_Now_Display'] font-medium text-[36px] text-white">
-                  Strategy & Planning
-                </h3>
-                <p className="font-['Inter'] font-normal text-[20px] text-white">
-                  Translating needs into a clear technical roadmap.
-                </p>
-              </div>
-            </div>
-            <div data-stage data-stage-position="right" className="absolute bg-[rgba(255,255,255,0.1)] flex items-center justify-center left-[572px] rounded-[10px] size-[80px] top-[263px] border border-[rgba(44,246,152,0.75)]">
-              <CanvasIcon />
-            </div>
+            {/* Stages */}
+            {stages.map((stage, i) => {
+              const top = i * 260;
+              const isRight = stage.side === "right";
+              return (
+                <React.Fragment key={i}>
+                  <div 
+                    data-stage 
+                    data-stage-position={stage.side} 
+                    className={`absolute ${isRight ? "left-[572px]" : "left-0 text-right"} top-[${top}px] w-[472px]`}
+                    style={{ top: `${top}px` }}
+                  >
+                    <div className={`flex flex-col gap-2 ${isRight ? "" : "items-end"}`}>
+                      <h3 className="font-['Helvetica_Now_Display'] font-medium text-[36px] text-white">
+                        {stage.title}
+                      </h3>
+                      <p className="font-['Inter'] font-normal text-[20px] text-white">
+                        {stage.description}
+                      </p>
+                    </div>
+                  </div>
+                  <div 
+                    data-stage 
+                    data-stage-position={isRight ? "left" : "right"} 
+                    className={`absolute bg-[rgba(255,255,255,0.1)] flex items-center justify-center ${isRight ? "left-[392px]" : "left-[572px]"} rounded-[10px] size-[80px] top-[${top + 3}px] border border-[rgba(44,246,152,0.75)]`}
+                    style={{ top: `${top + 3}px` }}
+                  >
+                    {stage.icon}
+                  </div>
+                </React.Fragment>
+              );
+            })}
+          </div>
 
-            {/* Stage 3: Design & Development */}
-            <div data-stage data-stage-position="right" className="absolute left-[572px] top-[520px] w-[472px]">
-              <div className="flex flex-col gap-2">
-                <h3 className="font-['Helvetica_Now_Display'] font-medium text-[36px] text-white">
-                  Design & Development
-                </h3>
-                <p className="font-['Inter'] font-normal text-[20px] text-white">
-                  Agile execution with transparency and collaboration.
-                </p>
-              </div>
-            </div>
-            <div data-stage data-stage-position="left" className="absolute bg-[rgba(255,255,255,0.1)] flex items-center justify-center left-[392px] rounded-[10px] size-[80px] top-[523px] border border-[rgba(44,246,152,0.75)]">
-              <WebDesignIcon />
-            </div>
+          {/* Mobile/Tablet Timeline - Visible on screens smaller than XL */}
+          <div className="xl:hidden flex flex-col gap-10 md:gap-16 mb-20 relative">
+            {/* Vertical connector line for mobile */}
+            <div className="absolute left-[30px] md:left-[40px] top-4 bottom-4 w-[2px] bg-white/10" />
+            
+            {stages.map((stage, i) => (
+              <div key={i} className="mobile-stage-item flex items-start gap-6 md:gap-10 relative">
+                {/* Icon Container */}
+                <div className="shrink-0 relative z-10">
+                  <div className="bg-[#1a2b3e] border border-[#2cf698]/50 rounded-[12px] p-3 md:p-5 shadow-[0_0_15px_rgba(44,246,152,0.1)]">
+                    <div className="size-8 md:size-10">
+                      {stage.icon}
+                    </div>
+                  </div>
+                  {/* Small glow dot on the line */}
+                  <div className="absolute left-1/2 -translate-x-1/2 -bottom-6 size-3 bg-[#2cf698] rounded-full blur-[2px] opacity-50" />
+                </div>
 
-            {/* Stage 4: Testing & Deployment */}
-            <div data-stage data-stage-position="left" className="absolute left-0 top-[780px] w-[472px] text-right">
-              <div className="flex flex-col gap-2 items-end">
-                <h3 className="font-['Helvetica_Now_Display'] font-medium text-[36px] text-white">
-                  Testing & Deployment
-                </h3>
-                <p className="font-['Inter'] font-normal text-[20px] text-white">
-                  Ensuring quality, security, and performance.
-                </p>
+                {/* Content Side */}
+                <div className="flex flex-col gap-2 pt-1 md:pt-3">
+                  <h3 className="font-['Helvetica_Now_Display'] font-medium text-[20px] md:text-[28px] text-white leading-tight">
+                    {stage.title}
+                  </h3>
+                  <p className="font-['Inter'] font-normal text-[14px] md:text-[18px] text-white/60 leading-relaxed max-w-[450px]">
+                    {stage.description}
+                  </p>
+                </div>
               </div>
-            </div>
-            <div data-stage data-stage-position="right" className="absolute bg-[rgba(255,255,255,0.1)] flex items-center justify-center left-[572px] rounded-[10px] size-[80px] top-[783px] border border-[rgba(44,246,152,0.75)]">
-              <TestTubeIcon />
-            </div>
-
-            {/* Stage 5: Support & Optimization */}
-            <div data-stage data-stage-position="right" className="absolute left-[572px] top-[1040px] w-[472px]">
-              <div className="flex flex-col gap-2">
-                <h3 className="font-['Helvetica_Now_Display'] font-medium text-[36px] text-white">
-                  Support & Optimization
-                </h3>
-                <p className="font-['Inter'] font-normal text-[20px] text-white">
-                  Long-term partnership beyond launch.
-                </p>
-              </div>
-            </div>
-            <div data-stage data-stage-position="left" className="absolute bg-[rgba(255,255,255,0.1)] flex items-center justify-center left-[392px] rounded-[10px] size-[80px] top-[1043px] border border-[rgba(44,246,152,0.75)]">
-              <MentoringIcon />
-            </div>
+            ))}
           </div>
 
           {/* Bottom Message */}
-          <div ref={bottomMessageRef} className="flex justify-center">
-            <p className="font-['Helvetica_Now_Display'] font-medium text-[36px] leading-[normal] text-center text-white max-w-[1250px]">
+          <div ref={bottomMessageRef} className="flex justify-center mt-10 md:mt-20">
+            <p className="font-['Helvetica_Now_Display'] font-medium text-[20px] md:text-[28px] lg:text-[36px] leading-relaxed text-center text-white max-w-[1250px] px-4">
               Every stage is backed by defined milestones, reviews, and quality checks to ensure predictable outcomes.
             </p>
           </div>
@@ -371,3 +396,4 @@ export function DeliveryFrameworkSection() {
     </section>
   );
 }
+

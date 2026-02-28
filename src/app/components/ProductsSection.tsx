@@ -9,6 +9,15 @@ import imgProduct1 from "figma:asset/251924140614b007a92b7197a5b4d8c4c4359b79.pn
 import imgProduct2 from "figma:asset/a8b1e93e0aef5169b109c3e6bf0071c80d154160.png";
 import imgProduct3 from "figma:asset/f953e5c9524a18eb1f613a1c25382b02628adba3.png";
 
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext,
+} from "./ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
+
 interface Product {
   id: number;
   title: string;
@@ -57,11 +66,11 @@ const products: Product[] = [
 
 function SectionHeader() {
   return (
-    <div className="flex flex-col gap-4 items-center text-center max-w-[656px] mx-auto mb-[60px]">
-      <h2 className="font-['Helvetica_Now_Display'] font-medium text-[64px] leading-[75px] text-[#111]">
+    <div className="flex flex-col gap-4 items-center text-center max-w-[856px] mx-auto mb-[40px] md:mb-[60px]">
+      <h2 className="font-['Helvetica_Now_Display'] font-medium text-[32px] md:text-[48px] lg:text-[64px] leading-tight lg:leading-[75px] text-[#111]">
         Future-Ready Products
       </h2>
-      <p className="font-['Inter'] font-normal text-[16px] leading-[30px] text-[#3c3c3c]">
+      <p className="font-['Inter'] font-normal text-[14px] md:text-[16px] leading-relaxed md:leading-[30px] text-[#3c3c3c]">
         Beyond services, we build and evolve digital products designed to meet tomorrow's challenges scalable, secure, and continuously improving.
       </p>
     </div>
@@ -91,11 +100,11 @@ function ArrowRightIcon() {
 
 function ProductCard({ product }: { product: Product }) {
   return (
-    <div className="bg-white rounded-[10px] shadow-[0px_0px_4px_0px_rgba(0,0,0,0.1)] overflow-hidden h-[503px] flex flex-col group hover:shadow-lg transition-shadow duration-300 relative">
+    <div className="bg-white rounded-[10px] shadow-[0px_0px_4px_0px_rgba(0,0,0,0.1)] overflow-hidden h-[480px] md:h-[503px] flex flex-col group hover:shadow-lg transition-shadow duration-300 relative mx-1">
       {/* Card Content */}
       <div className="flex flex-col gap-4 p-5 h-full">
         {/* Product Image */}
-        <div className="h-[200px] overflow-hidden rounded-[10px] relative">
+        <div className="h-[180px] md:h-[200px] overflow-hidden rounded-[10px] relative">
           <img 
             src={product.image} 
             alt={product.title}
@@ -105,16 +114,16 @@ function ProductCard({ product }: { product: Product }) {
 
         {/* Product Info */}
         <div className="flex flex-col gap-2 flex-1">
-          <h3 className="font-['Helvetica_Now_Display'] font-medium text-[24px] leading-[30px] text-[#111]">
+          <h3 className="font-['Helvetica_Now_Display'] font-medium text-[20px] md:text-[24px] leading-tight md:leading-[30px] text-[#111]">
             {product.title}
           </h3>
-          <p className="font-['Inter'] font-normal text-[16px] leading-[30px] text-[#3c3c3c]">
+          <p className="font-['Inter'] font-normal text-[14px] md:text-[16px] leading-relaxed md:leading-[30px] text-[#3c3c3c] line-clamp-3 md:line-clamp-none">
             {product.description}
           </p>
         </div>
 
         {/* View Details Button */}
-        <button className="flex gap-[10px] items-center py-[10px] group/button hover:gap-3 transition-all duration-300">
+        <button className="flex gap-[10px] items-center py-[10px] group/button hover:gap-3 transition-all duration-300 mt-auto">
           <span className="font-['Helvetica_Now_Display'] font-medium text-[16px] leading-normal text-[#111]">
             View Details
           </span>
@@ -123,8 +132,8 @@ function ProductCard({ product }: { product: Product }) {
       </div>
 
       {/* Green Glow Effect at Bottom */}
-      <div className="absolute left-[-34px] top-[679px] w-[470px] h-[144px] pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-        <div className="absolute inset-[-277.78%_-85.11%]">
+      <div className="absolute left-[-34px] bottom-[-72px] w-[470px] h-[144px] pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div className="absolute inset-0 translate-y-1/2">
           <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 1270 944">
             <g filter="url(#filter0_f_products_glow)">
               <ellipse cx="635" cy="472" fill="#61FAA3" rx="235" ry="72" />
@@ -153,20 +162,49 @@ function ProductCard({ product }: { product: Product }) {
 
 export function ProductsSection() {
   return (
-    <section className="py-16 md:py-20 lg:py-24 bg-white relative overflow-hidden">
+    <section className="py-12 md:py-20 lg:py-24 bg-white relative overflow-hidden">
       <div className="px-6 md:px-12 lg:px-24 xl:px-[100px] relative z-10">
         <div className="max-w-[1520px] mx-auto">
           {/* Section Header */}
           <SectionHeader />
 
-          {/* Products Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {/* Desktop Grid (Visible only on lg and larger) */}
+          <div className="hidden lg:grid grid-cols-3 gap-5">
             {products.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
+          </div>
+
+          {/* Mobile/Tablet Slider (Visible on smaller screens) */}
+          <div className="lg:hidden">
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              plugins={[
+                Autoplay({
+                  delay: 3000,
+                }),
+              ]}
+              className="w-full"
+            >
+              <CarouselContent className="-ml-2 md:-ml-4">
+                {products.map((product) => (
+                  <CarouselItem key={product.id} className="pl-2 md:pl-4 basis-full md:basis-1/2">
+                    <ProductCard product={product} />
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <div className="flex justify-center gap-4 mt-8">
+                <CarouselPrevious className="static translate-y-0" />
+                <CarouselNext className="static translate-y-0" />
+              </div>
+            </Carousel>
           </div>
         </div>
       </div>
     </section>
   );
 }
+
